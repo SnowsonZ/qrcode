@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/art/art.iml" filepath="$PROJECT_DIR$/art/art.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
       <module fileurl="file://$PROJECT_DIR$/qrcode.iml" filepath="$PROJECT_DIR$/qrcode.iml" />
     </modules>
   </component>

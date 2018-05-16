@@ -27,6 +27,8 @@ import java.util.Hashtable;
 
 import javax.imageio.ImageIO;
 
+import utils.FileUtils;
+
 public class QRCodeUtil{
     private static final String CHARSET = "UTF-8";
     private static final String FORMAT_NAME = "JPG";
@@ -53,7 +55,9 @@ public class QRCodeUtil{
         Hashtable<EncodeHintType, Object> hints = new Hashtable<EncodeHintType, Object>();
         hints.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.H);
         hints.put(EncodeHintType.CHARACTER_SET, CHARSET);
+        hints.put(EncodeHintType.DATA_MATRIX_SHAPE, 0);
         hints.put(EncodeHintType.MARGIN, 1);
+        hints.put(EncodeHintType.QR_VERSION, 13);
         BitMatrix bitMatrix = new MultiFormatWriter().encode(content,
                 BarcodeFormat.QR_CODE, QRCODE_SIZE, QRCODE_SIZE, hints);
         int width = bitMatrix.getWidth();

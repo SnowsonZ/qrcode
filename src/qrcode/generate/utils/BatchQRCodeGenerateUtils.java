@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.Properties;
 
 import qrcode.generate.bean.ShopInfo;
+import utils.CodeHelper;
 
 /**
  * @Author: Snowson
@@ -70,6 +71,10 @@ public class BatchQRCodeGenerateUtils {
                 if (!file.getParentFile().exists()) {
                     file.getParentFile().mkdirs();
                 }
+                if(file.exists()) {
+                    boolean delete = file.delete();
+                    System.out.println(delete);
+                }
                 String content = baseUrl + shopId;
                 System.out.println();
                 System.out.println("generate " + shopName + " QRCode started ...");
@@ -102,6 +107,10 @@ public class BatchQRCodeGenerateUtils {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public static void generateQRCodeByType() {
+
     }
 
 }

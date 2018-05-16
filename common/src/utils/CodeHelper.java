@@ -1,4 +1,4 @@
-package qrcode.generate.utils;
+package utils;
 
 public class CodeHelper{
     public static boolean isEmpty(String content){
